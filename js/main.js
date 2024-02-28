@@ -9,14 +9,17 @@ const { createApp } = Vue
       }
     },
     mounted() {
-        this.readList
+        this.readList()
     },
     methods: {
       readList(){
         axios.get( this.apiUrl )
         .then( (response) => {
-            this.listaDischi = response.data
+            this.listaDischi = response.data;
+            // Controllo i dati ottenuti dall'API
+            console.log(this.listaDischi); 
         } )
+        
       }
     }
   }).mount('#app')
