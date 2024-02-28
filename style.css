@@ -1,0 +1,18 @@
+body{
+    background-color: #1d2d3c;
+}
+main{
+    width: 70%;
+    margin: 0 auto;
+}
+.card {
+    flex-basis: calc(33.33% - 20px);
+    background-color: #112030;
+    color: white;
+}
+#logo{
+    width: 50px;
+}
+.barra{
+    background-color: #06131f;
+}

@@ -8,21 +8,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css' integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==' crossorigin='anonymous'/>
+    <link rel="stylesheet" href="style.css">
 
     <title>php-dischi-json</title>
 </head>
 <body>
     <div id="app">
-        <h1>{{message}}</h1>
-    </div>
-    <main>
-        <ul>
-        <li v-for="(element, index) in listaDischi" :key="index">
-      {{ element }}
-    </li>
-        </ul>
-    </main>
+        <div class="d-flex p-2 barra">
+            <img id="logo" src="./assets/img/2111624.png" alt="">
+            <h1 class="text-light">{{message}}</h1>
+        </div>
+        <main class="d-flex flex-wrap justify-content-center gap-4 p-3">
+            <div 
+            v-for="(element, index) in listaDischi"      :key="index" 
+            class="card text-center p-1" 
+            style="width: 10rem;">
+            <img :src="element.img_URL" class="card-img-top p-4" alt="...">
 
+                <div class="card-body">
+                    <h3>{{ element.album_name }}</h3>
+                    <p>{{ element.artist }}</p>
+                    <h4>{{ element.year }}</h4>
+                </div>
+            </div>  
+        </main>
+    </div>
 
 
 

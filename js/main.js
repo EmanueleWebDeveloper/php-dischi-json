@@ -3,7 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        message: 'Hello Vue!',
+        message: 'Spotify!',
         apiUrl: 'datas.php',
         listaDischi: []
       }
