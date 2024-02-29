@@ -20,7 +20,8 @@
         </div>
         <main class="d-flex flex-wrap justify-content-center gap-4 p-3">
             <div 
-            v-for="(element, index) in listaDischi"      :key="index" 
+            v-for="(element, index) in listaDischi"      
+            :key="indice" 
             class="card text-center p-1" 
             style="width: 10rem;">
             <img :src="element.img_URL" class="card-img-top p-4" alt="...">
